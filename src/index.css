@@ -124,6 +124,16 @@
     }
   }
 
+  @keyframes orbit {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
   @keyframes spin {
     from {
       transform: rotate(0deg);
@@ -131,6 +141,20 @@
 
     to {
       transform: rotate(360deg);
+    }
+  }
+
+  @keyframes swarm {
+
+    0%,
+    100% {
+      transform: translate(0, 0);
+      opacity: 0.8;
+    }
+
+    50% {
+      transform: translate(14px, -18px);
+      opacity: 1;
     }
   }
 }
@@ -173,5 +197,9 @@
 
   .neon-text {
     text-shadow: 0 0 10px rgba(0, 212, 255, 0.8), 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+
+  .animate-swarm {
+    animation: swarm 6s ease-in-out infinite;
   }
 }
